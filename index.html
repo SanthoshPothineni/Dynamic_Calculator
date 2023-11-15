@@ -1,0 +1,47 @@
+<!--File: index.html
+    GUI Assignment: Creating Multiplaction Table
+    Santhosh Pothineni, UMass Lowell Computer Science, 
+    santhosh_pothineni@student.uml.edu
+    Copyright (c) 2021 by Santhosh. All rights reserved. 
+    May be freely copied or excerpted for 
+    educational purposes with credit to the author.
+    updated by SP on November 14, 2023-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication Table</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class = "content">
+    <!-- Create Title Area -->
+    <div class="title-box">
+      <h1>Multiplication Table Creator</h1>
+    </div>
+    <!-- Container for flex boxes -->
+    <div class="flex-container">
+      <!-- Child for holding form -->
+      <div class="flex-child">
+        <div class="message">Enter Multiplication Values Below</div>
+        <form name="multForm" id="multForm" onsubmit="return processing();">
+          <label for="Vstart">Min Column Value:</label><br>
+          <input type="number" max="50" min="-50" required="required" id="Vstart" name="Vstart"><br>
+          <label for="Vend">Max Column Value:</label><br>
+          <input type="number" max="50" min="-50" required="required" id="Vend" name="Vend"><br>
+          <label for="Hstart">Min Row Value:</label><br>
+          <input type="number" max="50" min="-50" required="required" id="Hstart" name="Hstart"><br>
+          <label for="Hend">Max Row Value:</label><br>
+          <input type="number" max="50" min="-50" required="required" id="Hend" name="Hend"><br>
+          <input type="submit">
+        </form>
+      </div>
+      <!-- Child for holding -->
+      <div class="flex-child">
+        <table id="myTable">
+        </table> 
+      </div>
+    </div>
+</div>
+  <script src="javascript/script.js"></script>
+</body>
+</html>
